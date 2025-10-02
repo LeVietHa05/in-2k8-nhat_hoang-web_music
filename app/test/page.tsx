@@ -87,13 +87,13 @@ export default function TestPage() {
 
     if (loading) {
         return (
-            <div className="fixed inset-0 bg-linear-to-l from-[#DAE82C] via-[#3C8247] via-[#0A483D] to-[#092B25] flex items-center justify-center z-50">
-                <div className="text-center text-white">
+            <div className="fixed inset-0 bg-linear-to-l from-[#DAE82C] via-[#3C8247] via-[#0A483D] to-[#092B25] flex items-center justify-center z-50 px-4">
+                <div className="text-center text-white max-w-7xl w-full">
                     <div className="flex items-center justify-center mb-4">
-                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#A1C336]"></div>
+                        <div className="animate-spin rounded-full h-8 w-8 md:h-12 md:w-12 border-b-2 border-[#A1C336]"></div>
                         <Title text="Loading..." />
                     </div>
-                    <p className="text-lg">
+                    <p className="text-sm md:text-lg">
                         Please remember, broaden your knowledge on music so as not to become dependent on the quiz!
                     </p>
                 </div>
@@ -105,18 +105,18 @@ export default function TestPage() {
         const key = `${answers[0]}-${answers[2]}-${answers[3]}`;
         const res = results[key] || { chord: 'Unknown', name: 'Unknown', desc: 'No result found.', note: '' };
         return (
-            <div className="flex justify-center items-center h-screen overflow-hidden bg-linear-to-l from-[#DAE82C] via-[#3C8247] via-[#0A483D] to-[#092B25]">
-                <div className="max-w-7xl space-y-8">
-                    <div className="mb-6 text-[32px]">You could be looking for</div>
+            <div className="flex justify-center items-center min-h-screen overflow-hidden bg-linear-to-l from-[#DAE82C] via-[#3C8247] via-[#0A483D] to-[#092B25] px-4">
+                <div className="max-w-7xl w-full space-y-4 md:space-y-8">
+                    <div className="mb-6 text-xl md:text-[32px]">You could be looking for</div>
                     <Title text={res.chord}></Title>
                     <hr className="border-white border-2 my-6" />
-                    <div className="mb-6 text-lg text-[#7EBE88]">{res.desc}</div>
-                    <div className=" flex items-center border-y-4 rounded-r-3xl">
-                        <div className="flex-6 font-bold text-[32px]">
-                            <div className="text-sm mb-1">Example:</div>
-                            <div className="font-bold text-lg">{res.name}</div>
+                    <div className="mb-6 text-sm md:text-lg text-[#7EBE88]">{res.desc}</div>
+                    <div className="flex flex-col md:flex-row items-center border-y-4 md:rounded-r-3xl">
+                        <div className="flex-1 md:flex-6 font-bold text-xl md:text-[32px] text-center md:text-left">
+                            <div className="text-xs md:text-sm mb-1">Example:</div>
+                            <div className="font-bold text-sm md:text-lg">{res.name}</div>
                         </div>
-                        <div className="flex-2 flex justify-center">
+                        <div className="flex justify-center my-4 md:my-0">
                             <Image src="/arrow-circle-right.svg" alt="arrow" width={56} height={56} />
                         </div>
                         <button
@@ -125,7 +125,7 @@ export default function TestPage() {
                                 setCurrentQ(0);
                                 setAnswers({});
                             }}
-                            className="flex items-center gap-4 ring-4 rounded-3xl px-6 py-3 text-2xl font-bold uppercase hover:bg-white hover:text-[#A1C336] transition-colors duration-300"
+                            className="flex items-center gap-4 ring-4 rounded-3xl px-4 md:px-6 py-3 text-lg md:text-2xl font-bold uppercase hover:bg-white hover:text-[#A1C336] transition-colors duration-300 mb-2 md:mb-0"
                         >
                             <Title text='Again'></Title>
                         </button>
