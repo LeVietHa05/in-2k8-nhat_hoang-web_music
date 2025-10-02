@@ -3,40 +3,39 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Question from "../components/question";
 import Title from '../components/title';
-import { anton_SC } from '../components/font';
 
 const quizs = [
     {
         ques: "Were this chord progression a color, it would be…",
         ans: [
-            { imgSrc: '/ques-1-bright.png', text: "Bright", ans: 0 },
-            { imgSrc: '/ques-1-dark.png', text: "Dark", ans: 1 },
+            { imgSrc: '/ques-1-bright.png', onHover: '/ques-1-dark.png', text: "Bright", ans: 0 },
+            { imgSrc: '/ques-1-dark.png', onHover: '/ques-1-bright.png', text: "Dark", ans: 1 },
         ],
         isImportant: true,
     },
     {
         ques: "Of what period does this progression remind you?",
         ans: [
-            { imgSrc: null, text: "The past", ans: 0 },
-            { imgSrc: null, text: "The present", ans: 1 },
-            { imgSrc: null, text: "The future", ans: 2 },
+            { imgSrc: null, text: "The past", onHover: null, ans: 0 },
+            { imgSrc: null, text: "The present", onHover: null, ans: 1 },
+            { imgSrc: null, text: "The future", onHover: null, ans: 2 },
         ],
         isImportant: false,
     },
     {
         ques: "In what weather would this chord progression fit?",
         ans: [
-            { imgSrc: '/ques-2-sunny.png', text: "Sunny", ans: 0 },
-            { imgSrc: '/ques-2-fair.png', text: "Fair", ans: 1 },
-            { imgSrc: '/ques-2-rain.png', text: "Rainy", ans: 2 },
+            { imgSrc: '/ques-2-sunny.png', onHover: '/ques-2-sunny.png', text: "Sunny", ans: 0 },
+            { imgSrc: '/ques-2-fair.png', onHover: '/ques-2-fair.png', text: "Fair", ans: 1 },
+            { imgSrc: '/ques-2-rain.png', onHover: '/ques-2-rain.png', text: "Rainy", ans: 2 },
         ],
         isImportant: true,
     },
     {
         ques: "Where is this chord progression?",
         ans: [
-            { imgSrc: '/ques-3-inside.png', text: "Inside", ans: 0 },
-            { imgSrc: '/ques-3-outdoor.png', text: "Outdoor", ans: 1 },
+            { imgSrc: '/ques-3-inside.png', onHover: '/ques-3-inside.png', text: "Inside", ans: 0 },
+            { imgSrc: '/ques-3-outdoor.png', onHover: '/ques-3-outdoor.png', text: "Outdoor", ans: 1 },
         ],
         isImportant: true,
     },
