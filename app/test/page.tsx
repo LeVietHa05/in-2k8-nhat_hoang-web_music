@@ -8,8 +8,8 @@ const quizs = [
     {
         ques: "Were this chord progression a color, it would be…",
         ans: [
-            { imgSrc: '/ques-1-bright.png', onHover: '/ques-1-dark.png', text: "Bright", ans: 0 },
-            { imgSrc: '/ques-1-dark.png', onHover: '/ques-1-bright.png', text: "Dark", ans: 1 },
+            { imgSrc: '/ques-1-bright.png', onHover: '/ques-1-bright.png', text: "Bright", ans: 0 },
+            { imgSrc: '/ques-1-dark.png', onHover: '/ques-1-dark.png', text: "Dark", ans: 1 },
         ],
         isImportant: true,
     },
